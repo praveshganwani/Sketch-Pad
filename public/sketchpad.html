@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SketchPad | CN Project</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.socket.io/socket.io-1.4.5.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="sketch.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand"><h3>SketchPad!</h3></a>
+      <div><h3>Welcome, <%= username %></h3></div>
+    </nav>
+    <div class="container mt-5">
+      <div class="mb-2">Choose Color (#HEX)</div>
+      <input
+        type="text"
+        name="custom_color"
+        placeholder="#FFFFFF"
+        id="pickcolor"
+        class="call-picker"
+        value="<%= color %>"
+      />
+      <div id="color-holder" class="color-holder call-picker"></div>
+      <button
+        id="color-btn"
+        type="button"
+        class="btn btn-outline-dark option-button"
+      >
+        Change Color
+      </button>
+      <br />
+      <br />
+      <div class="mt-5 mb-2">Choose Stroke Width</div>
+      <input
+        type="text"
+        name="stroke_width"
+        placeholder="4"
+        id="stroke-width-picker"
+        class="stroke_width_picker"
+        value="<%= width %>"
+      />
+      <button
+        id="stroke-btn"
+        type="button"
+        class="btn btn-outline-dark option-button"
+      >
+        Change Stroke Width
+      </button>
+      <div class="mt-5">
+        <a href="index.html"
+          ><button type="button" class="btn btn-danger mr-3 exit-btn">
+            Exit
+          </button></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
